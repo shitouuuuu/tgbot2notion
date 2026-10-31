@@ -1,0 +1,16 @@
+[Unit]
+Description=Telegram Bot to Notion Bookmark Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/tgbot2notion
+ExecStart=/root/tgbot2notion/venv/bin/python -m src.main
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

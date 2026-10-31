@@ -1,0 +1,7 @@
+services:
+  tgbot2notion:
+    build: .
+    container_name: tgbot2notion
+    restart: always
+    env_file:
+      - .env
